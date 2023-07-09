@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>para generator</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Para Generator</h1>
-        
-        <input type="number" id="numOfwords" placeholder="Enter of Number of word">
-        <button onclick="generatorPara()">Generator</button>
-        
-              
-    </div>
+    <h1>Your lucky Color</h1>
+    <select  id="zodiac">
+        <option value="">Choose Zodiac</option>
+        <option value="aries">Aries</option>
+        <option value="tarus">Tarus</option>
+        <option value="gemini">Gemini</option>
+        <option value="cancer">Cancer</option>
+        <option value="leo">Leo</option>
+        <option value="virgo">Virgo</option>
+        <option value="scorpio">scorpio</option>
+        <option value="sagittarius">Sagittarius</option>
+        <option value="aquarius">Aquarius</option>
+        <option value="capricorn">Capricorn</option>
+        <option value="pisces">Pisces</option>
+    </select>
+    <button onclick="changeBackground()">Get Color</button>
 </body>
 <script src="script.js"></script>
 </html>

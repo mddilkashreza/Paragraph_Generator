@@ -1,40 +1,49 @@
-const input = document.getElementById("numOfwords");
+const zodiac = document.getElementById("zodiac");
 
-const container = document.querySelector(".container");
 
-const generatorWord = (n) => {
-  let text = "";
-  const letters = "ABCDEFHIJKLMNOPQRSTUVWXYZ";
+const body = document.body;
 
-  for (let i = 0; i < n; ++i) {
-    const random = (Math.random() * 20).toFixed(0);
-    text += letters[random];
-    console.log(random);
-  }
-  return text;
+
+const changeBackground = () => {
+
+    switch (zodiac.value) {
+        case "aries":
+            body.style.backgroundColor = "red";
+            break;
+
+        case "tarus":
+            body.style.backgroundColor = "pink";
+            break;
+
+        case "gemini":
+            body.style.backgroundColor = "green";
+            break;
+        case "cancer":
+            body.style.backgroundColor = "orange";
+            break;
+        case "leo":
+            body.style.backgroundColor = "blue";
+            break;
+        case "virgo":
+            body.style.backgroundColor = "violet";
+            break;
+        case "scorpio":
+            body.style.backgroundColor = "black";
+            break;
+        case "sagittarius":
+            body.style.backgroundColor = "darkgreen";
+            break;
+        case "aquarius":
+            body.style.backgroundColor = "purple";
+            break;
+        case "capricorn":
+            body.style.backgroundColor = "darkblue";
+            break;
+        case "pisces":
+            body.style.backgroundColor = "#fc0303";
+            break;
+
+        default:
+            break;
+    }
 };
-
-
-let numOfwords;
-const generatorPara = () => {
-  numOfwords = Number(input.value);
-
-  const para = document.createElement("p");
-  let data ="";
-
-  for (let i =0; i<numOfwords; ++i){
-    const randomNumber = (Math.random() * 15 ).toFixed(0);
-    data +=generatorWord(randomNumber);
-    data += " ";
-  }
- 
-  para.innerText = data;
-
-  para.setAttribute("class", "paras");
-
-  container.append(para);
-};
-
-
-
-
